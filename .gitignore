@@ -1,0 +1,32 @@
+# --- Node / React ---
+node_modules/
+dist/
+build/
+.cache/
+.next/
+out/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# --- Environment files ---
+.env
+.env.local
+.env.*.local
+
+# --- IntelliJ IDEA / WebStorm ---
+.idea/
+*.iml
+out/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+logs/
+*.log
+*.log.*
