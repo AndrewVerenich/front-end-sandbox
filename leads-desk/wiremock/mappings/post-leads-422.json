@@ -1,0 +1,25 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/leads",
+    "bodyPatterns": [
+      {
+        "contains": "reject-me@"
+      }
+    ]
+  },
+  "response": {
+    "status": 422,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "errors": {
+        "email": [
+          "For the demo, use a different address: reject-me@… intentionally returns 422 from WireMock."
+        ]
+      }
+    }
+  }
+}

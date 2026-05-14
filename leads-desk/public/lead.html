@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leads Desk — lead detail</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="site-header">
+        <h1>Lead detail</h1>
+        <p class="tagline"><a href="/">← Back to list</a></p>
+      </header>
+
+      <p id="load-status" class="loading">Loading…</p>
+
+      <section id="detail-panel" class="panel" hidden aria-live="polite">
+        <div class="toolbar">
+          <span id="detail-status" class="status-pill"></span>
+          <button type="button" class="btn btn-secondary" id="refresh-btn">Refresh</button>
+          <button type="button" class="btn btn-primary" id="contact-btn">Mark as contacted</button>
+        </div>
+        <dl class="detail-grid" id="detail-fields"></dl>
+        <div id="detail-message" class="message" role="status"></div>
+      </section>
+    </div>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/lead.js"></script>
+  </body>
+</html>
