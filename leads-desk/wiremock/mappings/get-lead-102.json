@@ -1,0 +1,24 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/leads/lead-102"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "id": "lead-102",
+      "fullName": "Boris Kim",
+      "email": "boris@example.com",
+      "phone": "+1 555 0202",
+      "source": "PARTNER",
+      "status": "NEW",
+      "createdAt": "2026-05-02T14:40:00Z",
+      "updatedAt": "2026-05-02T14:40:00Z",
+      "note": "Partner channel — confirm SLA"
+    }
+  }
+}

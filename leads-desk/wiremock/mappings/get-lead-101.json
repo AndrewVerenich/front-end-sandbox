@@ -1,0 +1,24 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/leads/lead-101"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "id": "lead-101",
+      "fullName": "Alice Volkov",
+      "email": "alice@example.com",
+      "phone": "+1 555 0101",
+      "source": "WEB",
+      "status": "NEW",
+      "createdAt": "2026-05-01T10:15:00Z",
+      "updatedAt": "2026-05-01T10:15:00Z",
+      "note": "Interested in enterprise pricing"
+    }
+  }
+}

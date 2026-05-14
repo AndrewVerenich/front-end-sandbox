@@ -1,0 +1,19 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/leads"
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "id": "lead-created-demo",
+      "status": "NEW",
+      "createdAt": "2026-05-13T12:00:00Z",
+      "message": "Static mock response: the new lead is not appended to GET /api/leads (see README)."
+    }
+  }
+}
