@@ -1,0 +1,52 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/products",
+    "queryParameters": {
+      "status": {
+        "equalTo": "ACTIVE"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "items": [
+        {
+          "id": "prod-101",
+          "title": "Mechanical Keyboard",
+          "category": "ELECTRONICS",
+          "priceCents": 8999,
+          "currency": "EUR",
+          "stock": 12,
+          "shortDescription": "Compact keyboard with tactile switches.",
+          "description": "75% mechanical keyboard with hot-swappable switches and per-key RGB."
+        },
+        {
+          "id": "prod-102",
+          "title": "Kotlin in Action",
+          "category": "BOOKS",
+          "priceCents": 4599,
+          "currency": "EUR",
+          "stock": 34,
+          "shortDescription": "Practical Kotlin reference for JVM engineers.",
+          "description": "Covers Kotlin language features, interop with Java, and architecture tips."
+        },
+        {
+          "id": "prod-103",
+          "title": "Desk Lamp",
+          "category": "HOME",
+          "priceCents": 3299,
+          "currency": "EUR",
+          "stock": 20,
+          "shortDescription": "Dimmable LED lamp for home office.",
+          "description": "Minimalist aluminum lamp with warm and cold light presets."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/orders",
+    "bodyPatterns": [
+      {
+        "contains": "out-of-stock@"
+      }
+    ]
+  },
+  "response": {
+    "status": 422,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error": "VALIDATION_FAILED",
+      "message": "Order validation failed.",
+      "errors": {
+        "email": [
+          "This demo email triggers a stock validation error."
+        ],
+        "items": [
+          "One or more requested items are out of stock in this static mock."
+        ]
+      }
+    }
+  }
+}

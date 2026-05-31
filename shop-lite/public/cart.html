@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Shop Lite - Cart</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+<div class="layout">
+  <header class="site-header">
+    <h1>Shop Lite</h1>
+    <nav>
+      <a href="/index.html">Catalog</a>
+      <a href="/cart.html">Cart <span id="cart-badge" class="badge">0</span></a>
+    </nav>
+  </header>
+
+  <section class="panel">
+    <h2>Your cart</h2>
+    <p id="cart-empty" class="muted" hidden>Cart is empty. Add products from catalog.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+        <tr>
+          <th>Product</th>
+          <th>Unit price</th>
+          <th>Qty</th>
+          <th>Line total</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody id="cart-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="summary">
+      <strong>Subtotal</strong>
+      <strong id="subtotal">€0.00</strong>
+    </div>
+
+    <div class="product-actions" style="margin-top: 1rem;">
+      <button id="clear-cart" class="btn btn-secondary">Clear cart</button>
+      <a id="go-checkout" class="btn btn-primary" href="/checkout.html">Checkout</a>
+    </div>
+  </section>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/cart-store.js"></script>
+<script src="/js/cart.js"></script>
+</body>
+</html>

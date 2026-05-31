@@ -1,0 +1,25 @@
+services:
+  wiremock:
+    image: wiremock/wiremock:3.9.2
+    container_name: shop-lite-wiremock
+    volumes:
+      - ./wiremock:/home/wiremock
+    networks:
+      - shop-lite-net
+
+  nginx:
+    image: nginx:alpine
+    container_name: shop-lite-nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./public:/usr/share/nginx/html:ro
+    depends_on:
+      - wiremock
+    networks:
+      - shop-lite-net
+
+networks:
+  shop-lite-net:
+    name: shop-lite-net

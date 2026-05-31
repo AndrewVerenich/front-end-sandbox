@@ -67,20 +67,4 @@ docker compose up
 | GET | `/api/leads/{другой id}` | `404` |
 | PATCH | `/api/leads/lead-101`, `/api/leads/lead-102` | `200`, статус `CONTACTED` |
 
----
 
-## Структура каталога
-
-```
-leads-desk/
-  docker-compose.yml
-  nginx/default.conf
-  public/
-    index.html
-    lead.html
-    css/styles.css
-    js/common.js
-    js/index.js
-    js/lead.js
-  wiremock/mappings/
-```
