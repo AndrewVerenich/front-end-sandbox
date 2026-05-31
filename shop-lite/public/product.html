@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Shop Lite - Product</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+<div class="layout">
+  <header class="site-header">
+    <h1>Shop Lite</h1>
+    <nav>
+      <a href="/index.html">Catalog</a>
+      <a href="/cart.html">Cart <span id="cart-badge" class="badge">0</span></a>
+    </nav>
+  </header>
+
+  <section class="panel">
+    <h2 id="product-title">Product details</h2>
+    <p id="product-meta" class="muted"></p>
+    <p id="product-description"></p>
+    <p id="product-stock" class="muted"></p>
+
+    <div class="product-actions">
+      <div style="max-width: 140px;">
+        <label for="quantity">Quantity</label>
+        <input id="quantity" type="number" min="1" value="1"/>
+      </div>
+      <button id="add-to-cart" class="btn btn-primary" disabled>Add to cart</button>
+    </div>
+    <div id="product-message" class="message" role="status" aria-live="polite"></div>
+  </section>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/cart-store.js"></script>
+<script src="/js/product.js"></script>
+</body>
+</html>

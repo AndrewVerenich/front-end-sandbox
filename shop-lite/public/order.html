@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Shop Lite - Order</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+<div class="layout">
+  <header class="site-header">
+    <h1>Shop Lite</h1>
+    <nav>
+      <a href="/index.html">Catalog</a>
+      <a href="/cart.html">Cart <span id="cart-badge" class="badge">0</span></a>
+    </nav>
+  </header>
+
+  <section class="panel">
+    <h2>Order confirmation</h2>
+    <p><strong>Order ID:</strong> <span id="order-id">-</span></p>
+    <p><strong>Status:</strong> <span id="order-status">-</span></p>
+    <p><strong>Customer:</strong> <span id="order-customer">-</span></p>
+    <p><strong>Total:</strong> <span id="order-total">-</span></p>
+    <h3>Items</h3>
+    <ul id="order-items"></ul>
+    <div id="order-message" class="message" role="status" aria-live="polite"></div>
+  </section>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/cart-store.js"></script>
+<script src="/js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Shop Lite - Catalog</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+<div class="layout">
+  <header class="site-header">
+    <h1>Shop Lite</h1>
+    <nav>
+      <a href="/index.html">Catalog</a>
+      <a href="/cart.html">Cart <span id="cart-badge" class="badge">0</span></a>
+    </nav>
+  </header>
+
+  <section class="panel">
+    <h2>Catalog</h2>
+    <div class="controls">
+      <div>
+        <label for="filter-category">Category</label>
+        <select id="filter-category">
+          <option value="">All</option>
+          <option value="ELECTRONICS">Electronics</option>
+          <option value="BOOKS">Books</option>
+          <option value="HOME">Home</option>
+        </select>
+      </div>
+      <div>
+        <label for="filter-max-price">Max price (EUR)</label>
+        <input id="filter-max-price" type="number" min="0" step="1" placeholder="No limit"/>
+      </div>
+      <div>
+        <label for="sort-by">Sort</label>
+        <select id="sort-by">
+          <option value="name">Name</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+        </select>
+      </div>
+    </div>
+    <p id="products-status" class="muted">Loading products...</p>
+    <div id="catalog-message" class="message" role="status" aria-live="polite"></div>
+    <div id="products-grid" class="products-grid"></div>
+  </section>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/cart-store.js"></script>
+<script src="/js/catalog.js"></script>
+</body>
+</html>

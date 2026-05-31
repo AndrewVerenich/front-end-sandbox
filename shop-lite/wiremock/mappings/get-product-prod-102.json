@@ -1,0 +1,23 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/products/prod-102"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "id": "prod-102",
+      "title": "Kotlin in Action",
+      "category": "BOOKS",
+      "priceCents": 4599,
+      "currency": "EUR",
+      "stock": 34,
+      "shortDescription": "Practical Kotlin reference for JVM engineers.",
+      "description": "Covers Kotlin language features, interop with Java, and architecture tips."
+    }
+  }
+}

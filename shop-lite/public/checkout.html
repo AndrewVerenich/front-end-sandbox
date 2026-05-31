@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Shop Lite - Checkout</title>
+  <link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+<div class="layout">
+  <header class="site-header">
+    <h1>Shop Lite</h1>
+    <nav>
+      <a href="/index.html">Catalog</a>
+      <a href="/cart.html">Cart <span id="cart-badge" class="badge">0</span></a>
+    </nav>
+  </header>
+
+  <section class="panel">
+    <h2>Checkout</h2>
+    <div class="grid-two">
+      <form id="checkout-form" novalidate>
+        <div>
+          <label for="fullName">Full name</label>
+          <input id="fullName" required maxlength="100"/>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" required type="email"/>
+        </div>
+        <div>
+          <label for="address">Address</label>
+          <textarea id="address" required maxlength="200"></textarea>
+        </div>
+        <div>
+          <label for="comment">Comment</label>
+          <textarea id="comment" maxlength="300"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Place order</button>
+        <div id="checkout-message" class="message" role="status" aria-live="polite"></div>
+      </form>
+
+      <aside>
+        <h3>Order summary</h3>
+        <ul id="summary-items"></ul>
+        <p><strong>Total:</strong> <span id="summary-total"></span></p>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/cart-store.js"></script>
+<script src="/js/checkout.js"></script>
+</body>
+</html>

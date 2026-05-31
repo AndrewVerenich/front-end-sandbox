@@ -1,0 +1,18 @@
+{
+  "priority": 15,
+  "request": {
+    "method": "PATCH",
+    "urlPath": "/api/orders/order-5001"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "id": "order-5001",
+      "status": "CONFIRMED",
+      "updatedAt": "2026-05-28T12:15:00Z"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/orders/order-5001"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "id": "order-5001",
+      "status": "PENDING",
+      "currency": "EUR",
+      "totalCents": 12298,
+      "customer": {
+        "fullName": "Demo Customer",
+        "email": "demo.customer@example.com"
+      },
+      "items": [
+        {
+          "productId": "prod-101",
+          "title": "Mechanical Keyboard",
+          "qty": 1,
+          "lineTotalCents": 8999
+        },
+        {
+          "productId": "prod-103",
+          "title": "Desk Lamp",
+          "qty": 1,
+          "lineTotalCents": 3299
+        }
+      ]
+    }
+  }
+}
