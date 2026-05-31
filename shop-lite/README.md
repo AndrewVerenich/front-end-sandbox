@@ -1,6 +1,6 @@
 # Shop Lite
 
-Демо-проект каталога и корзины для портфолио fullstack/backend-heavy разработчика: UI на чистом HTML/CSS/JavaScript,
+Каталог и корзина на чистом HTML/CSS/JavaScript,
 API-ответы через WireMock, раздача статики и прокси через nginx, запуск через Docker Compose.
 
 ## Стек

@@ -1,44 +1,45 @@
 # Front-end Sandbox
 
-**Портфолио фронтенд-проектов**: небольшие законченные демо с явным стеком, окружением и README по 
-каждому подпроекту. Фокус — осмысленные границы задачи, читаемая архитектура и воспроизводимый локальный запуск.
+Витрина **fullstack-навыков**: небольшие законченные демо с явным стеком, контрактом API и воспроизводимым локальным запуском через Docker.
 
-Цель репозитория: накопить витрину навыков по front-end для fullstack engineer.
+Каждый проект — отдельный шаг в освоении фронтенда **без npm, сборщиков и фреймворков**. Сначала разметка и стили, затем клиентская логика на vanilla JS. Общая инфраструктура (nginx + WireMock + Compose) повторяется намеренно: это тот же паттерн edge + API, который потом переносится на реальный Spring/Kotlin backend.
 
 ---
 
-## 📂 Проекты
+## Проекты
 
-### 1. [leads-desk](leads-desk/README.md)
+### 1. [leads-desk](leads-desk/README.md) — HTML + CSS, минимальный JS
 
-Минимальный **inbound lead desk** (домен «лиды»): форма, таблица входящих, карточка лида, немного `fetch` для JSON.
-Статика за **nginx**, контрактное API на **WireMock**, подъём окружения **Docker Compose**. Демонстрирует same-origin 
-доступ к `/api` через reverse proxy.
+**Домен:** inbound CRM — приём лидов, inbox, карточка лида.
 
-**Стек:** HTML5, CSS3, JavaScript, nginx, WireMock, Docker Compose.
+**Акцент:** разметка и стили. JavaScript только там, где без него не обойтись — отправка формы, загрузка списка, переход на карточку.
 
-**Запуск:**
-```bash
-cd leads-desk
-docker compose up
-# http://localhost:8080/
+| Навык | Что в проекте |
+|-------|---------------|
+| HTML5 | Семантика (`header`, `section`, форма, таблица, `dl`), a11y (`aria-live`, labels) |
+| CSS3 | CSS variables, Grid, Flexbox, медиазапросы, тёмная тема |
+| JS (минимум) | `fetch`, `DOMContentLoaded`, сборка строк таблицы, обработка 201/422 |
+| Infra | nginx reverse proxy, WireMock stubs, Docker Compose |
 
-```
+**Запуск:** `cd leads-desk && docker compose up` → http://localhost:8080/
+
 ---
 
-### 2. [shop-lite](shop-lite/README.md)
+### 2. [shop-lite](shop-lite/README.md) — HTML/CSS + vanilla JS
 
-Минимальный **e-commerce flow**: каталог товаров, карточка товара, корзина, checkout и экран подтверждения заказа.
-Фронтенд полностью на **vanilla JS** (без npm и сборщиков), состояние корзины хранится в `sessionStorage`.
-Статика отдается через **nginx**, API-контракт эмулируется через **WireMock**, запуск — через **Docker Compose**.
+**Домен:** e-commerce — каталог, корзина, checkout, подтверждение заказа.
 
-**Стек:** HTML5, CSS3, JavaScript, nginx, WireMock, Docker Compose.
+**Акцент:** клиентская логика. Тот же infra-паттерн, но JS уже несёт основную нагрузку — состояние, фильтры, flow из нескольких страниц.
 
-**Запуск:**
-```bash
-cd shop-lite
-docker compose up
-# http://localhost:8081/
-```
+| Навык | Что в проекте |
+|-------|---------------|
+| HTML/CSS | Те же принципы разметки + отдельный визуальный стиль (не копия leads-desk) |
+| Client state | `cart-store.js` — корзина в `sessionStorage`, пересчёт subtotal в cents |
+| JS modules (IIFE) | Изоляция через IIFE, публичный API через `window.ShopCartStore` / `window.ShopCommon` |
+| DOM & events | Фильтрация/сортировка каталога, qty controls, form validation, error handling |
+| API flow | `GET` каталог → `POST` заказ → `GET` confirmation |
+| Infra | nginx + WireMock + Docker Compose (порт 8081) |
+
+**Запуск:** `cd shop-lite && docker compose up` → http://localhost:8081/
+
 ---
-

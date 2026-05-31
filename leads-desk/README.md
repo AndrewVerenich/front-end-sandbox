@@ -1,6 +1,6 @@
 # Leads Desk
 
-Демо-приложение **минимальноЙ inbound CRM** (лиды): интерфейс на **простом HTML, CSS и JavaScript** без 
+МинимальныЙ inbound CRM (лиды): интерфейс на **простом HTML, CSS и JavaScript** без 
 сборщиков, фреймворков и npm. Статические файлы отдаёт **nginx**, REST-ответы имитирует **WireMock**; подъём окружения — **Docker Compose**.
 
 ---
