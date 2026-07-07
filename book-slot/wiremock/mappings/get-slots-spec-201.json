@@ -1,0 +1,23 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/specialists/spec-201/slots"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "items": [
+        { "time": "09:00", "available": true },
+        { "time": "10:00", "available": true },
+        { "time": "11:00", "available": false },
+        { "time": "13:00", "available": true },
+        { "time": "14:00", "available": true },
+        { "time": "15:00", "available": false }
+      ]
+    }
+  }
+}

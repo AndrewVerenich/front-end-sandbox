@@ -1,0 +1,29 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/services/svc-101/specialists"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "items": [
+        {
+          "id": "spec-201",
+          "name": "Alex Morgan",
+          "title": "Senior Barber",
+          "serviceIds": ["svc-101", "svc-102"]
+        },
+        {
+          "id": "spec-202",
+          "name": "Maria Lopez",
+          "title": "Stylist",
+          "serviceIds": ["svc-101", "svc-103"]
+        }
+      ]
+    }
+  }
+}

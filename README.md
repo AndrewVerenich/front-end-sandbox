@@ -2,7 +2,6 @@
 
 Витрина **fullstack-навыков**: небольшие законченные демо с явным стеком, контрактом API и воспроизводимым локальным запуском через Docker.
 
-Каждый проект — отдельный шаг в освоении фронтенда **без npm, сборщиков и фреймворков**. Сначала разметка и стили, затем клиентская логика на vanilla JS. Общая инфраструктура (nginx + WireMock + Compose) повторяется намеренно: это тот же паттерн edge + API, который потом переносится на реальный Spring/Kotlin backend.
 
 ---
 
@@ -41,5 +40,24 @@
 | Infra | nginx + WireMock + Docker Compose (порт 8081) |
 
 **Запуск:** `cd shop-lite && docker compose up` → http://localhost:8081/
+
+---
+
+### 3. [book-slot](book-slot/README.md) — React + TypeScript + Tailwind
+
+**Домен:** запись к специалисту — услуга → мастер → слот → подтверждение.
+
+**Акцент:** React-проект в портфолио. Тот же паттерн nginx + WireMock + Compose, но UI на React с роутингом, хуками и формами.
+
+| Навык | Что в проекте |
+|-------|---------------|
+| React | components, `useState`, `useEffect`, custom `useFetch` |
+| TypeScript | typed DTO, props |
+| Routing | react-router-dom — multi-step flow |
+| Forms | client validation + server `422` / `409` errors |
+| Tailwind | layout, responsive slot grid |
+| Infra | multi-stage Docker build, nginx SPA fallback, WireMock (порт 8082) |
+
+**Запуск:** `cd book-slot && docker compose up --build` → http://localhost:8082/
 
 ---

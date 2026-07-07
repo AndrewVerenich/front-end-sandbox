@@ -1,0 +1,29 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/services/svc-102/specialists"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "items": [
+        {
+          "id": "spec-201",
+          "name": "Alex Morgan",
+          "title": "Senior Barber",
+          "serviceIds": ["svc-101", "svc-102"]
+        },
+        {
+          "id": "spec-203",
+          "name": "Sam Reed",
+          "title": "Barber",
+          "serviceIds": ["svc-102", "svc-103"]
+        }
+      ]
+    }
+  }
+}

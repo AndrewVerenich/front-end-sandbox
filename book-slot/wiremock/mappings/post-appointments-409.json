@@ -1,0 +1,22 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/appointments",
+    "bodyPatterns": [
+      {
+        "contains": "slot-taken@"
+      }
+    ]
+  },
+  "response": {
+    "status": 409,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error": "SLOT_UNAVAILABLE",
+      "message": "This time slot is no longer available."
+    }
+  }
+}
