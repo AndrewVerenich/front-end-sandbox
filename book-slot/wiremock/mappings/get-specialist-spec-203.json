@@ -1,0 +1,19 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/specialists/spec-203"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "id": "spec-203",
+      "name": "Sam Reed",
+      "title": "Barber",
+      "serviceIds": ["svc-102", "svc-103"]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/services"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "items": [
+        {
+          "id": "svc-101",
+          "title": "Haircut",
+          "durationMinutes": 30,
+          "priceCents": 2500,
+          "description": "Classic cut and styling."
+        },
+        {
+          "id": "svc-102",
+          "title": "Beard Trim",
+          "durationMinutes": 20,
+          "priceCents": 1500,
+          "description": "Shape and trim with hot towel finish."
+        },
+        {
+          "id": "svc-103",
+          "title": "Hair Color",
+          "durationMinutes": 60,
+          "priceCents": 5500,
+          "description": "Full color service with consultation."
+        }
+      ]
+    }
+  }
+}

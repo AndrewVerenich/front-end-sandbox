@@ -1,0 +1,26 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/api/appointments",
+    "bodyPatterns": [
+      {
+        "contains": "invalid@"
+      }
+    ]
+  },
+  "response": {
+    "status": 422,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "error": "VALIDATION_FAILED",
+      "message": "Appointment validation failed.",
+      "errors": {
+        "email": ["This demo email triggers a validation error."],
+        "phone": ["Phone format is invalid in this static mock."]
+      }
+    }
+  }
+}

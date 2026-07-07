@@ -1,0 +1,19 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/specialists/spec-202"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "id": "spec-202",
+      "name": "Maria Lopez",
+      "title": "Stylist",
+      "serviceIds": ["svc-101", "svc-103"]
+    }
+  }
+}

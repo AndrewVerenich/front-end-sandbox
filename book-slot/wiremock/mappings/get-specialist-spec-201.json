@@ -1,0 +1,19 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/specialists/spec-201"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "id": "spec-201",
+      "name": "Alex Morgan",
+      "title": "Senior Barber",
+      "serviceIds": ["svc-101", "svc-102"]
+    }
+  }
+}
