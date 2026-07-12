@@ -61,3 +61,5 @@
 **Запуск:** `cd book-slot && docker compose up --build` → http://localhost:8082/
 
 ---
+
+Мой стек: HTML, CSS, JavaScript, TypeScript, React, TanStack Query, Vite, Vitest, npm
